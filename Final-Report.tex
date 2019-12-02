@@ -75,14 +75,15 @@ where X is  the predicted set of pixels and Y is the ground truth. The Dice coef
 		\end{itemize}
 		\item U-Net with ResNet\par
 		\noindent ResNet is a CNN architecture, made up of series of residual blocks (ResBlocks) with skip connections differenting ResNets from other CNNs. The networks skip connections can create a flatter loss surface which is much easier for the model to be trained with optimal weights.\par
-		\noindent As we mentioned above, U-Nets are very good for creating segmentation masks and for image processing. However, when using only a U-Net architecture the predictions tend to lack fine details, to help address this cross or skip connections can be added between blocks of the network. In our models, we have used a ResNet-18 for the encoder and decoder, a 18 layer ResNet architecture, as this has been found to be very effective by experiments. So the baseline is a U-Nets with ResNet-18 Encoders and cross connections.
 		\begin{figure}[htbp]
 		\centering
 		\subfloat[Loss \& Val Loss]{\includegraphics[height=4cm,width=5.5cm]{3.png}}
 		\subfloat[Dice Coef \& Val Dice Coef]{\includegraphics[height=4cm,width=5.5cm]{4.png}}
-		\caption{ Demo }
+		\caption{U-Net with ResNet}
 		\label{fig}
 		\end{figure}
+		\noindent As we mentioned above, U-Nets are very good for creating segmentation masks and for image processing. However, when using only a U-Net architecture the predictions tend to lack fine details, to help address this cross or skip connections can be added between blocks of the network. In our models, we have used a ResNet-18 for the encoder and decoder, a 18 layer ResNet architecture, as this has been found to be very effective by experiments. So the baseline is a U-Nets with ResNet-18 Encoders and cross connections.
+		
 
 	\end{enumerate}
 	\subsubsection{Optimization}
